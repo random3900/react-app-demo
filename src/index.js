@@ -42,6 +42,8 @@ import ReactDOM from "react-dom";
    HINT: style = {{color:blue}}  */
 
 /* 4. Let's now create our first weather card!*/
+
+/* 4a. Copy paste the Card div to create a row of cards with different information */
 ReactDOM.render(
   <div>
     <div className="Header">Weather Forecast</div>
@@ -56,11 +58,50 @@ ReactDOM.render(
         <div className="WordDescription">Sunny</div>
         <div className="Temperature">27°C</div>
       </div>
+      <div className="CardLight">
+        <div className="Day">Sunday</div>
+        <img
+          src="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
+          alt="Sun"
+          className="WeatherPicture"
+        ></img>
+        <div className="WordDescription">Sunny</div>
+        <div className="Temperature">27°C</div>
+      </div>
+      <div className="CardLight">
+        <div className="Day">Sunday</div>
+        <img
+          src="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
+          alt="Sun"
+          className="WeatherPicture"
+        ></img>
+        <div className="WordDescription">Sunny</div>
+        <div className="Temperature">27°C</div>
+      </div>
+      <div className="CardLight">
+        <div className="Day">Sunday</div>
+        <img
+          src="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
+          alt="Sun"
+          className="WeatherPicture"
+        ></img>
+        <div className="WordDescription">Sunny</div>
+        <div className="Temperature">27°C</div>
+      </div>
+      <div className="CardLight">
+        <div className="Day">Sunday</div>
+        <img
+          src="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
+          alt="Sun"
+          className="WeatherPicture"
+        ></img>
+        <div className="WordDescription">Sunny</div>
+        <div className="Temperature">27°C</div>
+      </div>
+  
     </div>
   </div>,
   document.getElementById("root"));
-
-/* 4a. Copy paste the Card div to create a row of cards with different information */
 
 /* 4a. Or actually, don't. This is where react components come in */
 
