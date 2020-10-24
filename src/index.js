@@ -112,7 +112,4 @@ ReactDOM.render(
 /* 9b. Note that React Hooks can only be used inside a function, copy paste your entire code into app.jsx */
 
 /* 9d. Now write a render statement that renders only an App component in the root div */
-ReactDOM.render(
-  <App/>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));

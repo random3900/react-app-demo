@@ -10,7 +10,7 @@ import React from "react";
            NOTE the curly braces here, because we're adding JS code to a HTML tag*/
 function Card(props) {
   return (
-    <div className="CardLight">
+    <div className={props.cardStyle === 0 ? "CardLight" : "CardDark"}>
       <div className="Day">{props.day}</div>
       <img
         src={props.imageSrc}
