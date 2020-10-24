@@ -77,50 +77,30 @@ import wD from "./weatherDetails";
 /* 7. You can also use import statements to import data to your app.
       For instance, the properties of each component can be imported from the WeatherDetails file. 
       Import information from the weatherDetails file and use it to populate your card components*/
-ReactDOM.render(
-  <div>
-    <Header />
-    <div className="WeatherCards">
-      <Card
-        day={wD[0].day}
-        imageSrc={wD[0].imageSrc}
-        description={wD[0].description}
-        temperature={wD[0].temperature}
-      />
-      <Card
-        day={wD[1].day}
-        imageSrc={wD[1].imageSrc}
-        description={wD[1].description}
-        temperature={wD[1].temperature}
-      />
-      <Card
-        day={wD[2].day}
-        imageSrc={wD[2].imageSrc}
-        description={wD[2].description}
-        temperature={wD[2].temperature}
-      />
-      <Card
-        day={wD[3].day}
-        imageSrc={wD[3].imageSrc}
-        description={wD[3].description}
-        temperature={wD[3].temperature}
-      />
-      <Card
-        day={wD[4].day}
-        imageSrc={wD[4].imageSrc}
-        description={wD[4].description}
-        temperature={wD[4].temperature}
-      />
-    </div>
-  </div>,
-  document.getElementById("root")
-);
+
 /* 8. Use the JavaScript map function to loop through your wD array and create custom cards 
 for each Day of the week */
 
 /*WITH ARROW FUNCTION*/
 
 /*WITHOUT ARROW FUNCTION*/
+function makeCard(item) {
+  return (
+    <Card
+      day={item.day}
+      imageSrc={item.imageSrc}
+      description={item.description}
+      temperature={item.temperature}
+    />
+  );
+}
+ReactDOM.render(
+  <div>
+    <Header />
+    <div className="WeatherCards">{wD.map(makeCard)}</div>
+  </div>,
+  document.getElementById("root")
+);
 
 /* 9. The last feature we're going to add to our app is an option to change the them from light to dark and back,
      with the click of a button. We will be using the concept of STATE and React's useState hook to achieve this*/
