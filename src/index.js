@@ -1,6 +1,8 @@
 /* 1a.Import React */
+import React from "react";
 
 /* 1b.Import React DOM */
+import ReactDOM from "react-dom";
 
 /* 5d i. Import Header */
 
@@ -13,6 +15,10 @@
 /* 1c.Render Your Code 
     HINT: ReactDOM.render(WHAT TO SHOW, WHERE TO SHOW IT)
 */
+ReactDOM.render(
+  <h1>This is my first React App :D</h1>,
+  document.getElementById("root")
+);
 
 /* 2a.Add one more h1 tag to your render method 
     HINT: The render method accepts only one HTML tag as its first parameter
