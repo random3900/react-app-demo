@@ -40,16 +40,25 @@ import ReactDOM from "react-dom";
    HINT: Use inline css to set the text color to blue
    HINT: Set style to a javascript object containing a key value pair for each style attribute
    HINT: style = {{color:blue}}  */
-var myName = "MYNAME";
-ReactDOM.render(
-  <div>
-    <h1 className="title">This is my first React App :D</h1>
-    <h1 style={{ color: "blue" }}>{myName}</h1>
-  </div>,
-  document.getElementById("root")
-);
 
 /* 4. Let's now create our first weather card!*/
+ReactDOM.render(
+  <div>
+    <div className="Header">Weather Forecast</div>
+    <div className="WeatherCards">
+      <div className="CardLight">
+        <div className="Day">Sunday</div>
+        <img
+          src="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
+          alt="Sun"
+          className="WeatherPicture"
+        ></img>
+        <div className="WordDescription">Sunny</div>
+        <div className="Temperature">27°C</div>
+      </div>
+    </div>
+  </div>,
+  document.getElementById("root"));
 
 /* 4a. Copy paste the Card div to create a row of cards with different information */
 
