@@ -60,19 +60,6 @@ import Card from "./card";
 /* 5a. Now that you've successfully created 2 new components, try importing them into this module.
    Create 2 new files named Header.jsx and Card.jsx in the src folder
    Move your functions to their respective files. */
-ReactDOM.render(
-  <div>
-    <Header />
-    <div className="WeatherCards">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </div>
-  </div>,
-  document.getElementById("root")
-);
 
 /* 5d. After completing steps 5b and 5c, add import statements at the beginning of your code. 
    Your app should now look the same as it previously did, without any errors */
@@ -85,6 +72,45 @@ ReactDOM.render(
    Your app should now look the same as it previously did, without any errors */
 
 /* 6c. Try adding a HTML Attribute (For example: className) to your Card component. Did it work? Why or why not? */
+ReactDOM.render(
+  <div>
+    <Header />
+    <div className="WeatherCards">
+      <Card
+        day="Sunday"
+        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
+        description="Sunny"
+        temperature="27°C"
+      />
+      <Card
+        day="Monday"
+        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779940.svg"
+        description="Light Rain"
+        temperature="25°C"
+      />
+      <Card
+        day="Tuesday"
+        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779754.svg"
+        description="Clouds"
+        temperature="24°C"
+      />
+      <Card
+        day="Wednesday"
+        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779765.svg"
+        description="Warm"
+        temperature="26°C"
+      />
+      <Card
+        day="Thursday"
+        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779927.svg"
+        description="Heavy Rain"
+        temperature="23°C"
+      />
+
+    </div>
+  </div>,
+  document.getElementById("root")
+);
 
 /* 7. You can also use import statements to import data to your app.
       For instance, the properties of each component can be imported from the WeatherDetails file. 
