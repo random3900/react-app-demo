@@ -11,6 +11,7 @@ import Header from "./header";
 import Card from "./card";
 
 /* 7. Import weatherDeatils */
+import wD from "./weatherDetails";
 
 /* 9c. Import your newly created App component */
 
@@ -72,50 +73,48 @@ import Card from "./card";
    Your app should now look the same as it previously did, without any errors */
 
 /* 6c. Try adding a HTML Attribute (For example: className) to your Card component. Did it work? Why or why not? */
+
+/* 7. You can also use import statements to import data to your app.
+      For instance, the properties of each component can be imported from the WeatherDetails file. 
+      Import information from the weatherDetails file and use it to populate your card components*/
 ReactDOM.render(
   <div>
     <Header />
     <div className="WeatherCards">
       <Card
-        day="Sunday"
-        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
-        description="Sunny"
-        temperature="27°C"
+        day={wD[0].day}
+        imageSrc={wD[0].imageSrc}
+        description={wD[0].description}
+        temperature={wD[0].temperature}
       />
       <Card
-        day="Monday"
-        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779940.svg"
-        description="Light Rain"
-        temperature="25°C"
+        day={wD[1].day}
+        imageSrc={wD[1].imageSrc}
+        description={wD[1].description}
+        temperature={wD[1].temperature}
       />
       <Card
-        day="Tuesday"
-        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779754.svg"
-        description="Clouds"
-        temperature="24°C"
+        day={wD[2].day}
+        imageSrc={wD[2].imageSrc}
+        description={wD[2].description}
+        temperature={wD[2].temperature}
       />
       <Card
-        day="Wednesday"
-        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779765.svg"
-        description="Warm"
-        temperature="26°C"
+        day={wD[3].day}
+        imageSrc={wD[3].imageSrc}
+        description={wD[3].description}
+        temperature={wD[3].temperature}
       />
       <Card
-        day="Thursday"
-        imageSrc="https://www.flaticon.com/svg/static/icons/svg/1779/1779927.svg"
-        description="Heavy Rain"
-        temperature="23°C"
+        day={wD[4].day}
+        imageSrc={wD[4].imageSrc}
+        description={wD[4].description}
+        temperature={wD[4].temperature}
       />
-
     </div>
   </div>,
   document.getElementById("root")
 );
-
-/* 7. You can also use import statements to import data to your app.
-      For instance, the properties of each component can be imported from the WeatherDetails file. 
-      Import information from the weatherDetails file and use it to populate your card components*/
-
 /* 8. Use the JavaScript map function to loop through your wD array and create custom cards 
 for each Day of the week */
 
