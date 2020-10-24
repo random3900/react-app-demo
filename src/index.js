@@ -24,14 +24,6 @@ import ReactDOM from "react-dom";
 /* 2b.Use a variable to render your name in the second h1 tag 
    HINT: Use a JavaScript variable to hold your name
    HINT: Replace the content in the second h1 tag with your variable name enclosed in curly braces {}*/
-var myName = "MYNAME";
-ReactDOM.render(
-  <div>
-    <h1>This is my first React App :D</h1>
-    <h1>{myName}</h1>
-  </div>,
-  document.getElementById("root")
-);
 
 /* 2c.Replace the variable name within the curly braces with different JavaScript expressions 
    Example: 2+3 
@@ -48,6 +40,14 @@ ReactDOM.render(
    HINT: Use inline css to set the text color to blue
    HINT: Set style to a javascript object containing a key value pair for each style attribute
    HINT: style = {{color:blue}}  */
+var myName = "MYNAME";
+ReactDOM.render(
+  <div>
+    <h1 className="title">This is my first React App :D</h1>
+    <h1 style={{ color: "blue" }}>{myName}</h1>
+  </div>,
+  document.getElementById("root")
+);
 
 /* 4. Let's now create our first weather card!*/
 
