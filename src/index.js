@@ -82,25 +82,23 @@ import wD from "./weatherDetails";
 for each Day of the week */
 
 /*WITH ARROW FUNCTION*/
-
-/*WITHOUT ARROW FUNCTION*/
-function makeCard(item) {
-  return (
-    <Card
-      day={item.day}
-      imageSrc={item.imageSrc}
-      description={item.description}
-      temperature={item.temperature}
-    />
-  );
-}
 ReactDOM.render(
   <div>
     <Header />
-    <div className="WeatherCards">{wD.map(makeCard)}</div>
+    <div className="WeatherCards">
+      {wD.map((item)=>{
+        return <Card               
+        day={item.day}
+        imageSrc={item.imageSrc}
+        description={item.description}
+        temperature={item.temperature}/>
+      })}
+    </div>
   </div>,
   document.getElementById("root")
 );
+
+/*WITHOUT ARROW FUNCTION*/
 
 /* 9. The last feature we're going to add to our app is an option to change the them from light to dark and back,
      with the click of a button. We will be using the concept of STATE and React's useState hook to achieve this*/
