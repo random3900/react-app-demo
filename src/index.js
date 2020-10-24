@@ -15,10 +15,6 @@ import ReactDOM from "react-dom";
 /* 1c.Render Your Code 
     HINT: ReactDOM.render(WHAT TO SHOW, WHERE TO SHOW IT)
 */
-ReactDOM.render(
-  <h1>This is my first React App :D</h1>,
-  document.getElementById("root")
-);
 
 /* 2a.Add one more h1 tag to your render method 
     HINT: The render method accepts only one HTML tag as its first parameter
@@ -28,6 +24,14 @@ ReactDOM.render(
 /* 2b.Use a variable to render your name in the second h1 tag 
    HINT: Use a JavaScript variable to hold your name
    HINT: Replace the content in the second h1 tag with your variable name enclosed in curly braces {}*/
+var myName = "MYNAME";
+ReactDOM.render(
+  <div>
+    <h1>This is my first React App :D</h1>
+    <h1>{myName}</h1>
+  </div>,
+  document.getElementById("root")
+);
 
 /* 2c.Replace the variable name within the curly braces with different JavaScript expressions 
    Example: 2+3 
@@ -63,7 +67,7 @@ ReactDOM.render(
    Create 2 new files named Header.jsx and Card.jsx in the src folder
    Move your functions to their respective files. */
 
-   /* 5d. After completing steps 5b and 5c, add import statements at the beginning of your code. 
+/* 5d. After completing steps 5b and 5c, add import statements at the beginning of your code. 
    Your app should now look the same as it previously did, without any errors */
 
 /* 6a. Add a props parameter to your Card component */
