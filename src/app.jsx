@@ -2,6 +2,37 @@
 Wrap the makeCard function inside an App() function and export it as default. 
 Replace the render function call with a return statement, you will not need the document.getElementById here */
 
+import React from "react";
+import Header from "./header";
+import Card from "./card";
+import wD from "./weatherDetails";
+
+function App() {
+  function makeCard(item) {
+    return (
+      <Card
+        day={item.day}
+        imageSrc={item.imageSrc}
+        description={item.description}
+        temperature={item.temperature}
+      />
+    );
+  }
+  return (
+    <div
+      style={{ height: "100vh" }}
+    >
+      <Header/>
+      <div className="WeatherCards">{wD.map(makeCard)}</div>
+      <button className="theme-btn">
+        Change to Dark Theme
+      </button>
+    </div>
+  );
+}
+
+export default App;
+
 /* 10a. Create a new constant variable called theme and a function changeTheme
   Use the useState hook to initialise the theme variable and changeTheme method 
   */

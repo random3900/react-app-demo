@@ -14,6 +14,7 @@ import Card from "./card";
 import wD from "./weatherDetails";
 
 /* 9c. Import your newly created App component */
+import App from "./app";
 
 /* 1c.Render Your Code 
     HINT: ReactDOM.render(WHAT TO SHOW, WHERE TO SHOW IT)
@@ -111,3 +112,7 @@ ReactDOM.render(
 /* 9b. Note that React Hooks can only be used inside a function, copy paste your entire code into app.jsx */
 
 /* 9d. Now write a render statement that renders only an App component in the root div */
+ReactDOM.render(
+  <App/>,
+  document.getElementById("root")
+);
