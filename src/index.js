@@ -5,8 +5,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 /* 5d i. Import Header */
+import Header from "./header";
 
 /* 5d ii. Import Card */
+import Card from "./card";
 
 /* 7. Import weatherDeatils */
 
@@ -50,45 +52,27 @@ import ReactDOM from "react-dom";
 /* 4b. i.Create a function with the name of your 1st component - Header
        ii.Return the Header div in your Header function
        iii.Add a <Header/> tag to your main div to render the Header component */
-function Header() {
-  return <div className="Header">Weather Forecast</div>;
-}
 
 /* 4c. Repeat steps i and ii for your Card Component
        Add 5 new cards to your WeatherCards div
        NOTE: The content of each of these cards will be the same, but we'll modify that later :D */
-function Card() {
-  return (
-    <div className="CardLight">
-      <div className="Day">Sunday</div>
-      <img
-        src="https://www.flaticon.com/svg/static/icons/svg/1779/1779906.svg"
-        alt="Sunny"
-        className="WeatherPicture"
-      ></img>
-      <div className="WordDescription">Sunny</div>
-      <div className="Temperature">27°C</div>
-    </div>
-  );
-}
-
-ReactDOM.render(
-  <div>
-    <Header/>
-    <div className="WeatherCards">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-    </div>
-  </div>,
-  document.getElementById("root")
-);
 
 /* 5a. Now that you've successfully created 2 new components, try importing them into this module.
    Create 2 new files named Header.jsx and Card.jsx in the src folder
    Move your functions to their respective files. */
+ReactDOM.render(
+  <div>
+    <Header />
+    <div className="WeatherCards">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
+  </div>,
+  document.getElementById("root")
+);
 
 /* 5d. After completing steps 5b and 5c, add import statements at the beginning of your code. 
    Your app should now look the same as it previously did, without any errors */
