@@ -90,24 +90,6 @@ for each Day of the week */
      with the click of a button. We will be using the concept of STATE and React's useState hook to achieve this*/
 
 /* 9a. Firstly, Add a button to your main div, below the WeatherCards div.*/
-function makeCard(item) {
-  return (
-    <Card
-      day={item.day}
-      imageSrc={item.imageSrc}
-      description={item.description}
-      temperature={item.temperature}
-    />
-  );
-}
-ReactDOM.render(
-  <div>
-    <Header />
-    <div className="WeatherCards">{wD.map(makeCard)}</div>
-    <button className="theme-btn">Change to Dark Theme</button>
-  </div>,
-  document.getElementById("root")
-);
 
 /* 9b. Note that React Hooks can only be used inside a function, copy paste your entire code into app.jsx */
 
